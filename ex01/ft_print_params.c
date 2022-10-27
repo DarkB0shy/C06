@@ -6,16 +6,16 @@
 /*   By: dcarassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 16:48:11 by dcarassi          #+#    #+#             */
-/*   Updated: 2022/10/27 16:58:59 by dcarassi         ###   ########.fr       */
+/*   Updated: 2022/10/27 17:37:37 by dcarassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	main (int argc, char *argv[])
+int	main(int argc, char *argv[])
 {
 	int	i;
-	int j;
+	int	j;
 
 	i = 1;
 	j = 0;

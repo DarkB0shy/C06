@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_sort_params.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcarassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 16:43:29 by dcarassi          #+#    #+#             */
-/*   Updated: 2022/10/27 17:37:03 by dcarassi         ###   ########.fr       */
+/*   Created: 2022/10/27 17:34:02 by dcarassi          #+#    #+#             */
+/*   Updated: 2022/10/27 17:35:07 by dcarassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	main(int argc, char *argv[])
+int	main (int argc, char *argv)
 {
-	int	i;
-
-	i = 0;
-	while (argv[0][i] != '\0' && argc)
-	{
-		write(1, &argv[0][i], 1);
-		i++;
-	}
-	write(1, "\n", 1);
-	return (0);
+	
 }
