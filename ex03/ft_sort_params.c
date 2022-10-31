@@ -6,7 +6,7 @@
 /*   By: dcarassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 11:17:24 by dcarassi          #+#    #+#             */
-/*   Updated: 2022/10/31 12:57:52 by dcarassi         ###   ########.fr       */
+/*   Updated: 2022/10/31 17:15:10 by dcarassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@ int	ft_strcmp(char *s1, char *s2)
 	int	i;
 
 	i = 0;
-	while (s1[i] || s2[i])
+	while (s1[i] == s2[i] && (s1[i] || s2[i]))
 	{
-		if (s1[i] > s2[i] || s1[i] < s2[i])
-			return (1);
+	//	if (s1[i] < s2[i] || s1[i] < s2[i])i
+		//	return (1);
 		i++;
 	}
-	return (0);
+	return (s1[i] - s2[i]);
 }
 
 void	swap(char *fs, char *ss)
@@ -51,16 +51,23 @@ int	main(int argc, char **argv)
 	int		i;
 	int		j;
 	int		k;
+	char *temp;
 
 	i = 0;
 	j = 1;
 	k = 1;
 	while (j < argc - 1)
 	{
+		
 		while (k < argc - 1)
 		{	
-			if ((ft_strcmp(argv[j], argv[j + 1]) == 1))
-				swap(argv[j], argv[j + 1]);
+			if ((ft_strcmp(argv[j], argv[j+1]) > 0))
+			{
+				temp = argv[j];
+				argv[j] = argv[k];
+				argv[k] = temp;
+				//swap(argv[j], argv[k]);
+			}
 			k++;
 		}
 		j++;
