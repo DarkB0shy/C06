@@ -6,7 +6,7 @@
 /*   By: dcarassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 11:17:24 by dcarassi          #+#    #+#             */
-/*   Updated: 2022/10/28 12:13:32 by dcarassi         ###   ########.fr       */
+/*   Updated: 2022/10/28 22:15:56 by dcarassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 int	ft_strcmp(char *s1, char *s2)
 {
-
 	int	i;
 
 	i = 0;
@@ -30,15 +29,15 @@ int	ft_strcmp(char *s1, char *s2)
 
 int	main(int argc, char **argv)
 {
-	int	i;
-	int	j;
-	char *swap;
+	char	*swap;
+	int		i;
+	int		j;
 
 	i = 0;
 	j = 1;
 	while (j < argc - 1)
 	{
-		if ((ft_strcmp(argv[j], argv[j+1]) == 1))
+		if ((ft_strcmp(argv[j], argv[j + 1]) == 1))
 		{
 			swap = argv[j];
 			argv[j] = argv[j + 1];
