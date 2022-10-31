@@ -6,7 +6,7 @@
 /*   By: dcarassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 11:17:24 by dcarassi          #+#    #+#             */
-/*   Updated: 2022/10/31 17:15:10 by dcarassi         ###   ########.fr       */
+/*   Updated: 2022/10/31 17:52:53 by dcarassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,13 @@ int	ft_strcmp(char *s1, char *s2)
 	return (s1[i] - s2[i]);
 }
 
-void	swap(char *fs, char *ss)
+void	swap(char **fs, char **ss)
 {
 	char	*tmp;
 
-	tmp = fs;
-	fs = ss;
-	ss = tmp;
+	tmp = *fs;
+	*fs = *ss;
+	*ss = tmp;
 }
 
 int	main(int argc, char **argv)
@@ -51,22 +51,18 @@ int	main(int argc, char **argv)
 	int		i;
 	int		j;
 	int		k;
-	char *temp;
 
 	i = 0;
 	j = 1;
 	k = 1;
-	while (j < argc - 1)
+	while (j < argc)
 	{
-		
-		while (k < argc - 1)
+		k = j + 1;
+		while (k < argc)
 		{	
-			if ((ft_strcmp(argv[j], argv[j+1]) > 0))
+			if ((ft_strcmp(argv[j], argv[k]) > 0))
 			{
-				temp = argv[j];
-				argv[j] = argv[k];
-				argv[k] = temp;
-				//swap(argv[j], argv[k]);
+				swap(&argv[j], &argv[k]);
 			}
 			k++;
 		}
